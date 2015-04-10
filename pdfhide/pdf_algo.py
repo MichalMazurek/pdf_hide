@@ -126,7 +126,7 @@ class PDF_stego:
 		k = 0
 		while k < line.__len__():
 			# Parse TJ string from current position
-			m = re.search(r'[>)](\-?[0-9]+)[<(]',line[k:])
+			m = re.search(r'[>) ](\-?[0-9]+)[ <(]',line[k:])
 			if m == None:
 				# No more TJ ops
 				k = line.__len__()
@@ -142,7 +142,7 @@ class PDF_stego:
 		k = 0
 		while k < line.__len__():
 			# Parse TJ string from current position
-			m = re.search(r'[>)](\-?[0-9]+)[<(]',line[k:])
+			m = re.search(r'[>) ](\-?[0-9]+)[ <(]',line[k:])
 			if m == None:
 				# No more TJ ops
 				k = line.__len__()
@@ -259,7 +259,7 @@ class PDF_stego:
 		k = 0
 		while k < newline.__len__():
 			# Look for a TJ op, starting at current position
-			m = re.search(r'[>)](\-?[0-9]+)[<(]',newline[k:])
+			m = re.search(r'[>) ](\-?[0-9]+)[ <(]',newline[k:])
 			if m == None:
 				# No more TJ ops
 				# -> Break the loop
@@ -468,7 +468,7 @@ class PDF_stego:
 		k = 0
 		while k < line.__len__():
 			# Look for a TJ op, starting at current position
-			m = re.search(r'[>)](\-?[0-9]+)[<(]',line[k:])
+			m = re.search(r'[>) ](\-?[0-9]+)[ <(]',line[k:])
 			if m == None:
 				# No more TJ ops
 				# -> Break the loop
